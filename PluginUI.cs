@@ -544,25 +544,25 @@ public static class PluginUI
 
         ImGui.SameLine();
 
-        if (ImGuiEx.BeginGroupBox("Sunderings", 0.5f))
+        if (ImGuiEx.BeginGroupBox("拆分連段", 0.5f))
         {
-            save |= ImGui.Checkbox("Sunder Fire in Red", ref ReAction.Config.EnableDecomboFireInRed);
-            ImGuiEx.SetItemTooltip("Removes the Fire in Red combo. You will need to use the hotbar\nfeature below to place it on your hotbar in order to use it again.\nAero in Green ID: 34651\nWater in Blue ID: 34652");
+            save |= ImGui.Checkbox("拆分「火炎之紅」", ref ReAction.Config.EnableDecomboFireInRed);
+            ImGuiEx.SetItemTooltip("移除「火炎之紅」連段。若要再次使用，需透過下方快捷欄功能放回快捷欄。\n疾風之綠 ID：34651\n流水之藍 ID：34652");
 
-            save |= ImGui.Checkbox("Sunder Fire II in Red", ref ReAction.Config.EnableDecomboFire2InRed);
-            ImGuiEx.SetItemTooltip("Removes the Fire II in Red combo. You will need to use the hotbar\nfeature below to place it on your hotbar in order to use it again.\nAero II in Green ID: 34657\nWater II in Blue ID: 34658");
+            save |= ImGui.Checkbox("拆分「高烈炎之紅」", ref ReAction.Config.EnableDecomboFire2InRed);
+            ImGuiEx.SetItemTooltip("移除「高烈炎之紅」連段。若要再次使用，需透過下方快捷欄功能放回快捷欄。\n烈風之綠 ID：34657\n高壓水流之藍 ID：34658");
 
-            save |= ImGui.Checkbox("Sunder Blizzard in Cyan", ref ReAction.Config.EnableDecomboBlizzardInCyan);
-            ImGuiEx.SetItemTooltip("Removes the Blizzard in Cyan combo. You will need to use the hotbar\nfeature below to place it on your hotbar in order to use it again.\nStone in Yellow ID: 34654\nThunder in Magenta ID: 34655");
+            save |= ImGui.Checkbox("拆分「冰結之青」", ref ReAction.Config.EnableDecomboBlizzardInCyan);
+            ImGuiEx.SetItemTooltip("移除「冰結之青」連段。若要再次使用，需透過下方快捷欄功能放回快捷欄。\n飛石之黃 ID：34654\n閃雷之紫 ID：34655");
 
-            save |= ImGui.Checkbox("Sunder Blizzard II in Cyan", ref ReAction.Config.EnableDecomboBlizzard2InCyan);
-            ImGuiEx.SetItemTooltip("Removes the Blizzard II in Cyan combo. You will need to use the hotbar\nfeature below to place it on your hotbar in order to use it again.\nStone II in Yellow ID: 34660\nThunder II in Magenta ID: 34661");
+            save |= ImGui.Checkbox("拆分「高冰結之青」", ref ReAction.Config.EnableDecomboBlizzard2InCyan);
+            ImGuiEx.SetItemTooltip("移除「高冰結之青」連段。若要再次使用，需透過下方快捷欄功能放回快捷欄。\n堅石之黃 ID：34660\n震雷之紫 ID：34661");
 
-            save |= ImGui.Checkbox("Sunder Liturgy of the Bell", ref ReAction.Config.EnableDecomboLiturgy);
-            ImGuiEx.SetItemTooltip("Removes the Liturgy of the Bell combo. You will need to use the hotbar\nfeature below to place it on your hotbar in order to use it again.\nLiturgy of the Bell (Detonate) ID: 28509");
+            save |= ImGui.Checkbox("拆分「禮儀之鈴」", ref ReAction.Config.EnableDecomboLiturgy);
+            ImGuiEx.SetItemTooltip("移除「禮儀之鈴」連段。若要再次使用，需透過下方快捷欄功能放回快捷欄。\n禮儀之鈴（引爆）ID：28509");
 
-            save |= ImGui.Checkbox("Sunder Earthly Star", ref ReAction.Config.EnableDecomboEarthlyStar);
-            ImGuiEx.SetItemTooltip("Removes the Earthly Star combo. You will need to use the hotbar\nfeature below to place it on your hotbar in order to use it again.\nStellar Detonation ID: 8324");
+            save |= ImGui.Checkbox("拆分「地星」", ref ReAction.Config.EnableDecomboEarthlyStar);
+            ImGuiEx.SetItemTooltip("移除「地星」連段。若要再次使用，需透過下方快捷欄功能放回快捷欄。\n星體爆轟 ID：8324");
 
             ImGuiEx.EndGroupBox();
         }
@@ -595,22 +595,22 @@ public static class PluginUI
 
         ImGui.SameLine();
 
-        if (ImGuiEx.BeginGroupBox("Place on Hotbar (HOVER ME FOR INFORMATION)", 0.5f, new ImGuiEx.GroupBoxOptions
+        if (ImGuiEx.BeginGroupBox("放置到快捷欄（滑鼠移入查看說明）", 0.5f, new ImGuiEx.GroupBoxOptions
         {
             HeaderTextAction = () => ImGuiEx.SetItemTooltip(
-                "This will allow you to place various things on the hotbar that you can't normally." +
-                "\nIf you don't know what this can be used for, don't touch it." +
-                "\nSome examples of things you can do:" +
-                "\n\tPlace a certain action on the hotbar to be used with one of the \"Sundering\" features. The IDs are in each setting's tooltip." +
-                "\n\tPlace a certain doze and sit emote on the hotbar (Emote, 88 and 95)." +
-                "\n\tPlace a currency (Item, 1-99) on the hotbar to see how much you have without opening the currency menu." +
-                "\n\tRevive flying mount roulette (GeneralAction, 24).")
+                "可將一般無法配置的各種項目放到快捷欄。" +
+                "\n若不清楚用途，請勿操作。" +
+                "\n用途範例：" +
+                "\n\t將特定技能放到快捷欄，以搭配「拆分連段」功能；ID 可在各選項提示中查看。" +
+                "\n\t將特定打瞌睡或坐下情感動作放到快捷欄（Emote，88 與 95）。" +
+                "\n\t將貨幣（Item，1–99）放到快捷欄，不開啟貨幣選單也能查看持有數量。" +
+                "\n\t恢復飛行坐騎隨機召喚（GeneralAction，24）。")
         }))
         {
-            ImGui.Combo("Bar", ref hotbar, "1\02\03\04\05\06\07\08\09\010\0XHB 1\0XHB 2\0XHB 3\0XHB 4\0XHB 5\0XHB 6\0XHB 7\0XHB 8");
-            ImGui.Combo("Slot", ref hotbarSlot, "1\02\03\04\05\06\07\08\09\010\011\012\013\014\015\016");
+            ImGui.Combo("快捷欄", ref hotbar, "1\02\03\04\05\06\07\08\09\010\0XHB 1\0XHB 2\0XHB 3\0XHB 4\0XHB 5\0XHB 6\0XHB 7\0XHB 8");
+            ImGui.Combo("欄位", ref hotbarSlot, "1\02\03\04\05\06\07\08\09\010\011\012\013\014\015\016");
             var hotbarSlotType = Enum.GetName(typeof(RaptureHotbarModule.HotbarSlotType), commandType) ?? commandType.ToString();
-            if (ImGui.BeginCombo("Type", hotbarSlotType))
+            if (ImGui.BeginCombo("類型", hotbarSlotType))
             {
                 for (int i = 1; i <= 32; i++)
                 {
@@ -622,7 +622,7 @@ public static class PluginUI
 
             DrawHotbarIDInput((RaptureHotbarModule.HotbarSlotType)commandType);
 
-            if (ImGui.Button("Execute"))
+            if (ImGui.Button("執行"))
                 Game.SetHotbarSlot(hotbar, hotbarSlot, (byte)commandType, commandID);
             ImGuiEx.EndGroupBox();
         }
@@ -644,7 +644,7 @@ public static class PluginUI
                 if (ImGuiEx.ExcelSheetCombo($"ID##{commandType}", ref _, new ImGuiEx.ExcelSheetComboOptions<Item> { FormatRow = r => $"[#{r.RowId}] {r.Name}" }))
                     commandID = commandID >= hqID ? _ + hqID : _;
                 var hq = commandID >= hqID;
-                if (ImGui.Checkbox("HQ", ref hq))
+                    if (ImGui.Checkbox("高品質", ref hq))
                     commandID = hq ? commandID + hqID : commandID - hqID;
                 break;
             case RaptureHotbarModule.HotbarSlotType.EventItem:
@@ -757,48 +757,39 @@ public static class PluginUI
     {
         ImGui.Text("建立堆疊");
         ImGui.Indent();
-        ImGui.TextWrapped("To start, click the + button in the top left corner, this will create a new stack that you can begin adding actions and functionality to.");
+        ImGui.TextWrapped("按一下左上角的＋按鈕即可建立新堆疊，接著便可新增技能與功能。");
         ImGui.Unindent();
 
         ImGui.Separator();
 
         ImGui.Text("編輯堆疊");
         ImGui.Indent();
-        ImGui.TextWrapped("Click on a stack from the top left list to display the editing panes for that it. The bottom left pane is where the " +
-            "main settings reside, these will change the base functionality for the stack itself.");
+        ImGui.TextWrapped("從左上方清單選取堆疊後會顯示編輯區。左下方區域包含主要設定，可調整該堆疊本身的基本運作方式。");
         ImGui.Unindent();
 
         ImGui.Separator();
 
         ImGui.Text("編輯堆疊技能");
         ImGui.Indent();
-        ImGui.TextWrapped("The top right pane is where you can add actions, click the + to bring up a box that you can search for them through. " +
-            "After adding every action that you would like to change the functionality of, you can additionally select which ones you would like to " +
-            "\"adjust\". This means that the selected action will match any other one that replaces it on the hotbar. This can be due to a trait " +
-            "(Holy <-> Holy III), a buff (Play -> The Balance) or another plugin (XIVCombo). An example case where you might want it off is when the " +
-            "adjusted action has a separate use case, such as XIVCombo turning Play into Draw. You can change the functionality of the individual " +
-            "cards while not affecting Draw by adding each of them to the list. Additionally, if the action is currently adjusted by the game, the " +
-            "option will be highlighted in green as an indicator.");
+        ImGui.TextWrapped("右上方區域用於新增技能；按一下＋即可開啟搜尋視窗。新增要調整的技能後，可選擇是否使用「變化後 ID」。" +
+            "啟用後，技能也會符合快捷欄上取代它的其他技能，例如因特性升級、狀態效果或其他連段插件而產生的變化。" +
+            "若變化後的技能另有用途，可停用此選項。技能目前正被遊戲或插件變化時，選項會以綠色標示。");
         ImGui.Unindent();
 
         ImGui.Separator();
 
         ImGui.Text("編輯堆疊功能");
         ImGui.Indent();
-        ImGui.TextWrapped("The bottom right pane is where you can change the functionality of the selected actions, by setting a list of targets to " +
-            "extend or replace the game's. When the action is used, the plugin will attempt to determine, from top to bottom, which target is a valid choice. " +
-            "This will execute before the game's own target priority system and only allow it to continue if not blocked by the stack. If any of the targets " +
-            "are valid choices, the plugin will change the action's target to the new one and, additionally, replace the action with the override if set.");
+        ImGui.TextWrapped("右下方區域可設定目標清單，以擴充或取代遊戲原本的選取方式。使用技能時，插件會由上而下尋找第一個有效目標，" +
+            "並在遊戲自身的目標優先系統之前執行。若堆疊未阻擋原技能，遊戲才會繼續處理；找到有效目標時，也會套用已設定的技能覆寫。");
         ImGui.Unindent();
 
         ImGui.Separator();
 
         ImGui.Text("堆疊優先順序");
         ImGui.Indent();
-        ImGui.TextWrapped("The executed stack will depend on which one, from top to bottom, first contains the action being used and has its modifier " +
-            "keys held. If you would like to use \"All Actions\" in a stack, you can utilize this to add overrides above it in the list. Note that a stack " +
-            "does not need to contain any functionality in the event that you would like for a set of actions to never be changed by \"All Actions\" and " +
-            "instead use the original.");
+        ImGui.TextWrapped("插件會由上而下尋找第一個包含目前技能、且輔助鍵符合的堆疊。若使用「所有技能」，可在其上方加入更高優先的覆寫堆疊。" +
+            "堆疊也可以不包含任何功能，用來讓指定技能避開「所有技能」的變更並維持原本行為。");
         ImGui.Unindent();
     }
 }
