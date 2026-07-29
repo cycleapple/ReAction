@@ -516,8 +516,8 @@ public static class PluginUI
 
                 ImGui.SameLine();
                 save |= ImGui.SliderFloat("佇列臨界值", ref ReAction.Config.QueueThreshold, 0.1f, 2.5f, "%.1f");
-                ImGuiEx.SetItemTooltip("Time remaining on an action's cooldown to allow the game\nto queue up the next one when pressed early. Default: 0.5." +
-                    (ReAction.Config.EnableGCDAdjustedQueueThreshold ? $"\nGCD Adjusted Threshold: {ReAction.Config.QueueThreshold * ActionManager.GCDRecast / 2500f}" : string.Empty));
+                ImGuiEx.SetItemTooltip("提早按下技能時，允許遊戲將下一個技能排入佇列的冷卻剩餘時間。預設：0.5。" +
+                    (ReAction.Config.EnableGCDAdjustedQueueThreshold ? $"\n依 GCD 調整後的臨界值：{ReAction.Config.QueueThreshold * ActionManager.GCDRecast / 2500f}" : string.Empty));
 
                 ImGui.BeginGroup();
                 ImGuiEx.Prefix(false);
