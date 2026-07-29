@@ -1,8 +1,8 @@
 ﻿{
   "Author": "UnknownX",
   "Name": "ReAction",
-  "Punchline": "QoL for the battle system.",
-  "Description": "Improves aspects of the battle system with action stacks (like MOAction) and various QoL settings.",
+  "Punchline": "改善戰鬥系統操作體驗。",
+  "Description": "透過技能堆疊（類似 MOAction）及多項便利設定改善戰鬥操作。",
   "IconUrl": "",
   "ImageUrls": [
     ""
